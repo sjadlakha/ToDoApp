@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <!-- Adding jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- here the link foor the css file is not /public/assets/styles.css because we have set the middleware in the app.js to public folder already -->
+    <link rel="stylesheet" href="/assets/style.css" type="text/css">
+    <script src="/assets/todo-list.js"></script>
+</head>
+
+<body>
+    <h1>My ToDo List</h1>
+    <div id="todo-table">
+        <!-- <form method="POST" action="/todo">
+         -->
+        <form>
+            <input type="text" name="item" placeholder="Add New Item Here" required>
+            <button type="submit">Add Item</button>
+        </form>
+
+        <ul>
+            <% for(var i =0; i<todos.length;i++){ %>
+            <li><%= todos[i].item %></li>
+
+            <% } %>
+
+        </ul>
+    </div>
+</body>
+
+</html>
